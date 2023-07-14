@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="shortcut icon"
+      href="/assets/fave icon.jpg"
+      type="image/x-icon"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>modern news app</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- navigation start  -->
+
+    <nav>
+      <div class="main-nav container flex">
+        <a href="#" onclick="reload()">
+          <img src="/assets/logo image.jpg" alt="news logo" />
+        </a>
+        <div class="nav-links">
+          <ul class="ul flex">
+            <li
+              class="hover-link nav-item"
+              id="ipl"
+              onclick="onNavItemClick('sports')"
+            >
+              Sports
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="finance"
+              onclick="onNavItemClick('finance')"
+            >
+              Finance
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="finance"
+              onclick="onNavItemClick('cricket')"
+            >
+              Cricket
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="politics"
+              onclick="onNavItemClick('politics')"
+            >
+              Politics
+            </li>
+          </ul>
+        </div>
+        <div class="search-bar">
+          <input
+            id="search-text"
+            type="text"
+            class="news-input"
+            placeholder="  Search here"
+          />
+          <button id="search-button" class="search-button">Search</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- navigation end  -->
+
+    <!-- main start  -->
+    <main>
+      <div class="cards-container container flex" id="cards-container"></div>
+    </main>
+    <template id="template-news-card">
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://via.placeholder.com/400x200"
+            alt="news-images"
+            id="news-img"
+          />
+        </div>
+        <div class="card-content">
+          <h3 class="news-title" id="news-title">This is the Title</h3>
+          <h6 class="news-source" id="news-source">End Gadget 11/07/23</h6>
+          <p class="news-desc" id="news-desc">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Voluptates, molestias, explicabo in minima dolorem illo fugiat
+            temporibus ratione nesciunt dolorum pariatur at mollitia, eligendi
+            porro repudiandae culpa non numquam libero quo? Inventore, ullam
+            consequatur.
+          </p>
+        </div>
+      </div>
+    </template>
+  </body>
+</html>
